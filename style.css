@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.body{
+    background-image: url('./Images/bg.jpg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size : cover;
+    display: flex;
+    min-height: 100vh;
+       align-items: center;
+    justify-content: center;
+
+}
+.logo img{
+    height:250px;
+    position: absolute;
+    right: 8%;
+    bottom: 6%;
+    border-radius: 40%;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+}
+#board{
+    position: relative;
+    background: linear-gradient(rgb(125, 248, 125) ,rgb(236, 236, 150));
+    height: 92vmin;
+    width: 92vmin;
+    display: grid;
+    grid-template-columns: repeat(18 ,1fr);
+    grid-template-rows: repeat(18 ,1fr);
+    border-top: 16px solid grey;
+    border-bottom: 16px solid grey;
+    border-left: 16px solid black;
+    border-right: 16px solid black;
+    
+}
+.head{
+    /* background-image: url('./Images/head_logo.png'), no-repeat; */
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(rgb(252, 252, 129) , orange);
+    transform: scale(1.12);
+    border-radius:30%;
+    -webkit-border-radius:30%;
+    -moz-border-radius:30%;
+    -ms-border-radius:30%;
+    -o-border-radius:30%;
+}
+.food{
+    border-radius:30%;
+    background: linear-gradient(red ,purple);
+    border: 3px solid rgb(66, 65, 70);
+    -webkit-border-radius:30%;
+    -moz-border-radius:30%;
+    -ms-border-radius:30%;
+    -o-border-radius:30%;
+}
+.snake{
+       background-color: blueviolet;
+       border: 3px solid rgb(66, 65, 70);
+       border-radius:30%;
+       -webkit-border-radius:30%;
+       -moz-border-radius:30%;
+       -ms-border-radius:30%;
+       -o-border-radius:30%;
+       box-shadow: rgba(0,0,0,0.3);
+}
+#scoreBox{
+    position: absolute;
+    top :9px;
+    font-family: 'Julee', cursive;
+    right :50px;
+    font-size:  37px;
+}
+
+@media screen and (max-width:768px) {
+
+    #scoreBox{
+        position: absolute;
+        top: 26px;
+        right: 100px;
+        font-size: 20px;
+        text-align: center;
+        display: block;
+    }
+    #board{
+        margin-bottom: 65px;
+    }
+    .logo img{
+        height: 180px;
+    position: absolute;
+    right: 19%;
+    bottom: -1%;
+    border-radius: 40%;
+    -webkit-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+    }
+}
