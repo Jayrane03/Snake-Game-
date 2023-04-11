@@ -3,6 +3,11 @@ const foodSound = new Audio('food.mp3');
 const gameOverSound = new Audio('gameover.mp3');
 const moveSound = new Audio('move.mp3');
 const musicSound = new Audio('music.mp3');
+const upbtn = document.getElementById('up')
+const downbtn = document.getElementById('down')
+const leftbtn = document.getElementById('left')
+const rightbtn = document.getElementById('right')
+const btns = document.querySelectorAll('.btn button')
 // let board = document.getElementsByClassName('board')
 let speed = 8;
 let lastPaintTime = 0;
@@ -139,6 +144,34 @@ else{
     highScore.innerHTML = highScore;
 }
 
+
+function keydown(key) {
+    moveSound.play();
+    switch (key) {
+        case "ArrowUp":
+            console.log("ArrowUp")
+            snakeVelocity.x = 0;
+            snakeVelocity.y = -1;
+            break;
+        case "ArrowDown":
+            console.log("ArrowDown")
+            snakeVelocity.x = 0;
+            snakeVelocity.y = 1;
+            break;
+        case "ArrowRight":
+            console.log("ArrowRight")
+            snakeVelocity.x = 1;
+            snakeVelocity.y = 0;
+            break;
+        case "ArrowLeft":
+            console.log("ArrowLeft")
+            snakeVelocity.x = -1;
+            snakeVelocity.y = 0;
+            break;
+        default:
+            break;
+    }
+}
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e => {
     snakeVelocity = { x: 0, y: 1 }; //Game start's here
@@ -168,4 +201,9 @@ window.addEventListener('keydown', e => {
             break;
 
     }
+  
+});
+
+btns.forEach(key => {
+    key.addEventListener("click", () => keydown(key.dataset.key));
 });

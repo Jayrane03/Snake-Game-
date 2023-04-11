@@ -5,20 +5,22 @@
 
 }
 .body{
+ 
     background-image: url('./Images/bg.jpg');
     background-repeat: no-repeat;
     /* background-position: center; */
     background-size : cover;
     display: flex;
+
     min-height: 100vh;
        align-items: center;
     justify-content: center;
 
 }
 .logo img{
-    height:250px;
+    height:200px;
     position: absolute;
-    right: 8%;
+    right: 6%;
     bottom: 6%;
     border-radius: 40%;
     -webkit-border-radius: 40%;
@@ -78,9 +80,28 @@
     right :50px;
     font-size:  37px;
 }
+.btn{
+    visibility:hidden ;
+    }
+    .btn button{
+        
+        border: 2px solid black;
+        padding: 20px;
+        text-align:center ;
+    }
 
 @media screen and (max-width:768px) {
 
+    .body{
+        background-image: url(./Images/bg.jpg);
+        background-repeat: no-repeat;
+        /* background-position: center; */
+        background-size: cover;
+        display: flex;
+        min-height: 130vh;
+        align-items: center;
+        justify-content: center;
+    }
     #scoreBox{
         position: absolute;
         top: 26px;
@@ -93,14 +114,49 @@
         margin-bottom: 65px;
     }
     .logo img{
-        height: 180px;
+        height: 88px;
     position: absolute;
-    right: 19%;
-    bottom: -1%;
+    right: 3%;
+    bottom: -30%;
     border-radius: 40%;
-    -webkit-border-radius: 40%;
+    /* -webkit-border-radius: 40%; */
     -moz-border-radius: 40%;
     -ms-border-radius: 40%;
     -o-border-radius: 40%;
     }
+    .btn button{
+        background-color: yellow;
+        border: 2px solid black;
+        padding: 20px;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 20px;
+    }
+    
+    .btn{
+        visibility: visible;
+        margin: 176px 0;
+    }
+  #up{
+    position: absolute;
+    right: 42%;
+    bottom: 4%;
+  }
+  #down{
+    position: absolute;
+    bottom: -19%;
+    right: 42%;
+  }
+  #left{
+    position: absolute;
+    left: 18%;
+    bottom: -7%;
+  }
+ #right{
+    position: absolute;
+    right: 18%;
+    bottom: -7%;
+
+ }
 }
+
